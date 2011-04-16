@@ -20,4 +20,9 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'ruby-filemagic'
+  s.add_dependency 'paperclip'
+
+  s.add_development_dependency 'mocha'
+  s.add_development_dependency 'shoulda'
+  s.add_development_dependency 'sqlite3-ruby'
 end
