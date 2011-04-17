@@ -2,11 +2,12 @@
 
 require 'active_record'
 require 'mocha'
-require 'paperclip'
 require 'shoulda'
 require 'test/unit'
 
 require 'paperclip-filemagic'
+
+Paperclip.magic_content_type!
 
 FIXTURES_DIR = File.join(File.dirname(__FILE__), "fixtures")
 config = YAML::load(IO.read(File.dirname(__FILE__) + '/database.yml'))
