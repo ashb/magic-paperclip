@@ -4,6 +4,8 @@
 require 'filemagic'
 require 'paperclip'
 
+require 'paperclip-filemagic/railtie'
+
 module Paperclip
   def self.magic_content_type!
     Attachment.send :include, FileMagic
