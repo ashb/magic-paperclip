@@ -1,4 +1,4 @@
-# Paperclip::FileMagic
+# MagicPaperclip
 
 [Paperclip] is a wonderful module by Thoughtbot that lets makes handling
 attachments in Rails a breeze, except for one minor niggle - file types. It
@@ -40,11 +40,12 @@ recommend installing it via [homebrew]:
 
 Include the gem in your Gemfile:
 
-    gem 'paperclip-filemagic'
+    gem 'magic-paperclip'
 
 # Usage
 
-Its all automatic - paperclip-filemagic does its trick by just being in the Gemfile.
+Its all automatic - magic-paperclip does its trick by just being in the
+Gemfile (via a Railtie).
 
 When a Paperclip attachment is assigned to its content_type will be detected
 and will overwrite what the browser sends.

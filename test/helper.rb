@@ -5,7 +5,7 @@ require 'mocha'
 require 'shoulda'
 require 'test/unit'
 
-require 'paperclip-filemagic'
+require 'magic-paperclip'
 
 Paperclip.magic_content_type!
 

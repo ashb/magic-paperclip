@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "paperclip-filemagic/version"
+require "magic-paperclip/version"
 
 Gem::Specification.new do |s|
-  s.name        = "paperclip-filemagic"
-  s.version     = Paperclip::Filemagic::VERSION
+  s.name        = "magic-paperclip"
+  s.version     = MagicPaperclip::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Ash Berlin"]
   s.email       = ["ash.berlin@gmail.com"]
