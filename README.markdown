@@ -34,7 +34,7 @@ recommend installing it via [homebrew]:
 
     brew install libmagic
     # Since this will be in a non-standard place we need to build ruby-filemagic specially
-    gem install ruby-filemagic -- --with-opt-dir=/usr/local/Cellar/libmagic/5.04/
+    gem install ruby-filemagic -- --with-opt-dir=$(brew list libmagic | head -n1 | xargs dirname)
 
 # Installation
 

@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["ash.berlin@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Filemagic based mimetype detection for Paperclip}
-  s.description = %q{Adds better file type detection support into Thoughtbot's Paperclip}
+  s.description = %q{Adds better (a.k.a magic) file type detection support into Thoughtbot's Paperclip}
 
   #s.rubyforge_project = "paperclip-filemagic"
 
