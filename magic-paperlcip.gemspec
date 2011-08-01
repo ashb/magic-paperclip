@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Ash Berlin"]
   s.email       = ["ash.berlin@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/DigiResults/magic-paperclip"
   s.summary     = %q{Filemagic based mimetype detection for Paperclip}
   s.description = %q{Adds better (a.k.a magic) file type detection support into Thoughtbot's Paperclip}
 
