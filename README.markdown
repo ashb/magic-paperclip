@@ -29,7 +29,7 @@ relevant package:
     sudo yum install file-devel # rpm
     sudo emerge file # gentoo
 
-On OSX ships with the `file` binary but not the `libmagic` shared library so I
+OSX ships with the `file` binary but not the `libmagic` shared library so I
 recommend installing it via [homebrew]:
 
     brew install libmagic
