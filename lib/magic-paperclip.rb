@@ -21,28 +21,21 @@ module MagicPaperclip
   end
 
   def assign_with_filemagic( uploaded_file )
-    # Call next method up the chain
-    val = assign_without_filemagic( uploaded_file )
+    assign_without_filemagic( uploaded_file ).tap do
+      return unless uploaded_file
+      return if uploaded_file.kind_of?( Paperclip::Attachment ) # Attachment#reprocess!
 
-    return val if uploaded_file.is_a?( Paperclip::Attachment )
+      io_adapter = self.queued_for_write[:original]
 
-    if uploaded_file
-      magic = FileMagic.new( FileMagic::MAGIC_MIME )
-
-      if defined?( StringIO ) && uploaded_file.is_a?( StringIO )
-        type = magic.buffer( uploaded_file.string )
-      else
-        type = magic.file( uploaded_file.path )
+      begin
+        magic = FileMagic.new( FileMagic::MAGIC_MIME )
+        type = magic.file( io_adapter.path )
+        type.sub! /\s*;.*$/, '' # Remove the '; charset=us-ascii' from the end if there is one
+        instance_write( :content_type, type )
+      ensure
+        magic.close if magic
       end
-
-      # Remove the '; charset=us-ascii' from the end if there is one
-      type.sub! /\s*;.*$/, ''
-
-      instance_write( :content_type, type )
     end
-    val
-  ensure
-    magic.close if magic
   end
 
 end

@@ -1,9 +1,10 @@
 # Copied from Paperclip's own test suite
 
+require 'test/unit'
 require 'active_record'
+require 'fakeweb'
 require 'mocha'
 require 'shoulda'
-require 'test/unit'
 
 require 'magic-paperclip'
 
